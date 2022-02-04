@@ -34,10 +34,21 @@ public class MainActivity extends AppCompatActivity {
             money= money*22000;
             money = Math.round(money*100)/100;
             lbp.setText(""+money);
+            usd.setText("");
 
-        }akeText(getApplicationContext(), message, Toast.LENGTH_SHORT);
+        }else if(!lbpText.equals("")){
+            message = "converting to USD";
+            money = Double.parseDouble(lbpText);
+            money= money/22000;
+            money = Math.round(money*100)/100;
+            usd.setText(""+money);
+            lbp.setText("");
+
+        }
+
+        Toast t1 = Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT);
         t1.show();
-        Toast t1 = Toast.m
+
 
 
     }
