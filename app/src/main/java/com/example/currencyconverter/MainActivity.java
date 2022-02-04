@@ -35,9 +35,9 @@ public class MainActivity extends AppCompatActivity {
             money = Math.round(money*100)/100;
             lbp.setText(""+money);
 
-        }
-        Toast t1 = Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT);
+        }akeText(getApplicationContext(), message, Toast.LENGTH_SHORT);
         t1.show();
+        Toast t1 = Toast.m
 
 
     }
