@@ -29,11 +29,11 @@ public class MainActivity extends AppCompatActivity {
             message = "error enter nb ya hmar";
 
         }else if(!usdText.equals("")){
-            massage = "converting to LBP";
-            money = Double.parseDouble(lbpText);
+            message = "converting to LBP";
+            money = Double.parseDouble(usdText);
             money= money*22000;
             money = Math.round(money*100)/100;
-            
+            lbp.setText(""+money);
 
         }
         Toast t1 = Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT);
