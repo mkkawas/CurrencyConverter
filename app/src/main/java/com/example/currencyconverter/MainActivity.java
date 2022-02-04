@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
     public void convert(View v){
+        double money;
         TextView usd = findViewById(R.id.numberUSD);
         TextView lbp = findViewById(R.id.numberLBP);
 
@@ -27,7 +28,17 @@ public class MainActivity extends AppCompatActivity {
         if(usdText.equals("")&& lbpText.equals("")){
             message = "error enter nb ya hmar";
 
+        }else if(!usdText.equals("")){
+            massage = "converting to LBP";
+            money = Double.parseDouble(lbpText);
+            money= money*22000;
+            money = Math.round(money*100)/100;
+            
+
         }
+        Toast t1 = Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT);
+        t1.show();
+
 
     }
 
